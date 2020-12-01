@@ -1,0 +1,12 @@
+---
+- name: Install mysql python
+  yum:  name=MySQL-python state=present
+
+- name: Install mariadb package
+  yum: name=mariadb-server state=installed
+
+- name: Install mariadb
+  yum:  name=mariadb state=present
+
+- name: start mysql
+  service: name=mariadb state=started enabled=yes
